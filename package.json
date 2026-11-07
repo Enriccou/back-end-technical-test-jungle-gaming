@@ -1,0 +1,54 @@
+{
+  "name": "jungle-gaming-wager-processor",
+  "version": "1.0.0",
+  "description": "Distributed wagering transaction processor",
+  "scripts": {
+    "dev": "nest start --watch",
+    "build": "nest build",
+    "start": "node dist/main.js",
+    "start:debug": "nest start --debug --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "test:int": "bun test --match '*integration*'",
+    "test:e2e": "bun test --match '*e2e*'",
+    "db:migrate": "node dist/cli/migrate.js",
+    "db:migrate:create": "node dist/cli/migration-create.js",
+    "seed": "node dist/seed.js"
+  },
+  "dependencies": {
+    "@mikro-orm/core": "^5.9.0",
+    "@mikro-orm/migrations": "^5.9.0",
+    "@mikro-orm/nestjs": "^5.2.0",
+    "@mikro-orm/postgresql": "^5.9.0",
+    "@mikro-orm/sql-highlighter": "^1.0.0",
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/config": "^3.0.0",
+    "@nestjs/core": "^10.0.0",
+    "@nestjs/jwt": "^10.0.0",
+    "@nestjs/passport": "^10.0.0",
+    "@nestjs/platform-express": "^10.0.0",
+    "aws-sdk": "^2.1600.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
+    "decimal.js": "^10.4.0",
+    "dotenv": "^18.0.9",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^10.3.0",
+    "@nestjs/schematics": "^10.0.3",
+    "@types/bun": "latest",
+    "@types/node": "^20.10.6",
+    "@types/uuid": "^9.0.7",
+    "bun-types": "latest",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "bun": ">=1.0.0"
+  }
+}
